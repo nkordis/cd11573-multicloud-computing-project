@@ -150,6 +150,9 @@ Your goal is to select a cloud provider for each of the 4 required services - SQ
 2. Create an additional environment variable to demonstrate even more connectivity between additional services
 3. Create another demonstration application similar to the one used in the project and show it accessing cloud resources
 
+# Why we chose AWS DynamoDB over Azure Cosmos DB for our NoSQL database
+After evaluating both AWS DynamoDB and Azure Cosmos DB, we decided to go with DynamoDB for the NoSQL database. Although both services offer global availability and highly scalable pricing, we felt that DynamoDB was the better choice for our needs. One of the main reasons was that it has a simpler and more flexible pricing model compared to Cosmos DB, with a pay-per-request structure that allows for more precise cost control. Additionally, we appreciated the seamless integration with other AWS services such as Lambda, which made it easier to implement efficient serverless architectures. While Cosmos DB also has its strengths, we found that DynamoDB's simpler pricing and stronger AWS integration made it the best fit for our overall cloud architecture.
+
 ## License
 
 [License](LICENSE.txt)
