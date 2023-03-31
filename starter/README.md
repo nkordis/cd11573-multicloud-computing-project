@@ -1,3 +1,2 @@
-# Purpose of this Folder
-
-This folder should contain the scaffolded project files to get a student started on their project. This repo will be added to the Classroom for students to use, so please do not have any solutions in this folder.
+# Why we chose AWS DynamoDB over Azure Cosmos DB for our NoSQL database
+After evaluating both AWS DynamoDB and Azure Cosmos DB, we decided to go with DynamoDB for the NoSQL database. Although both services offer global availability and highly scalable pricing, we felt that DynamoDB was the better choice for our needs. One of the main reasons was that it has a simpler and more flexible pricing model compared to Cosmos DB, with a pay-per-request structure that allows for more precise cost control. Additionally, we appreciated the seamless integration with other AWS services such as Lambda, which made it easier to implement efficient serverless architectures. While Cosmos DB also has its strengths, we found that DynamoDB's simpler pricing and stronger AWS integration made it the best fit for our overall cloud architecture.
