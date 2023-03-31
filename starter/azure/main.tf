@@ -32,16 +32,16 @@ resource "azurerm_container_group" "udacity" {
 
 ####### Your Additions Will Start Here ######
 
-resource "azurerm_storage_account" "example" {
-  name                     = "examplesa"
+resource "azurerm_storage_account" "nikosko_storage_account" {
+  name                     = "nikoskosa"
   resource_group_name      = data.azurerm_resource_group.udacity.name
   location                 = data.azurerm_resource_group.udacity.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
 }
 
-resource "azurerm_mssql_server" "example" {
-  name                         = "example-sqlserver"
+resource "azurerm_mssql_server" "nikosko_sql_server" {
+  name                         = "nikosko-sqlserver"
   resource_group_name          = data.azurerm_resource_group.udacity.name
   location                     = data.azurerm_resource_group.udacity.location
   version                      = "12.0"
@@ -49,19 +49,19 @@ resource "azurerm_mssql_server" "example" {
   administrator_login_password = "4-v3ry-53cr37-p455w0rd"
 }
 
-resource "azurerm_service_plan" "example" {
-  name                = "example"
+resource "azurerm_service_plan" "nikosko_service_plan" {
+  name                = "nikosko-service-plan"
   resource_group_name = data.azurerm_resource_group.udacity.name
   location            = data.azurerm_resource_group.udacity.location
   os_type             = "Linux"
   sku_name            = "P1v2"
 }
 
-resource "azurerm_linux_web_app" "example" {
-  name                = "example"
+resource "azurerm_linux_web_app" "nikosko_web_app" {
+  name                = "nikosko-web-app"
   resource_group_name = data.azurerm_resource_group.udacity.name
   location            = data.azurerm_resource_group.udacity.location
-  service_plan_id     = azurerm_service_plan.example.id
+  service_plan_id     = azurerm_service_plan.nikosko_service_plan.id
 
   site_config {}
 }
